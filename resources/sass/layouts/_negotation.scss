@@ -1,0 +1,61 @@
+.form-counter-offer {
+    display: flex;
+    gap: 8px;
+
+    input {
+        max-width: 112px;
+        max-height: 32px;
+
+        @media screen and (min-width: 1500px) {
+            max-width: 112px;
+
+        }
+    }
+}
+
+
+div.negotation-form.dropdown.bootstrap-select.button-green {
+    background-color: transparent;
+    padding: 0px;
+    height: auto;
+    outline: transparent;
+
+    &+button,
+    .bs-title-option {
+        display: none;
+    }
+
+    &>.button-green.negotation-form+.btn {
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0 16px;
+        height: 32px;
+        background-color: var(--green);
+        border-radius: 32px;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: all 500ms linear;
+        border: 0px;
+        text-decoration: none;
+        outline: transparent;
+
+        &:active,
+        &:focus {
+            outline: transparent !important;
+        }
+
+        &::after {
+            background-size: 16px;
+            background-position: center;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='16' height='16' /%3e%3cg %3e%3cpath d='M7.99999 9.96667C7.9111 9.96667 7.82777 9.95267 7.74999 9.92467C7.67221 9.89711 7.59999 9.85 7.53332 9.78334L4.44999 6.7C4.32777 6.57778 4.26955 6.42489 4.27532 6.24134C4.28066 6.05823 4.34443 5.90556 4.46666 5.78334C4.58888 5.66112 4.74444 5.6 4.93332 5.6C5.12221 5.6 5.27777 5.66112 5.39999 5.78334L7.99999 8.38334L10.6167 5.76667C10.7389 5.64445 10.8918 5.586 11.0753 5.59134C11.2584 5.59712 11.4111 5.66112 11.5333 5.78334C11.6555 5.90556 11.7167 6.06112 11.7167 6.25C11.7167 6.43889 11.6555 6.59445 11.5333 6.71667L8.46666 9.78334C8.39999 9.85 8.32777 9.89711 8.24999 9.92467C8.17221 9.95267 8.08888 9.96667 7.99999 9.96667Z' fill='white'/%3e%3c/g%3e%3c/svg%3e ");
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+        }
+
+    }
+}

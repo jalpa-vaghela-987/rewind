@@ -1,0 +1,31 @@
+.buy-desc {
+    font-size: 16px;
+    line-height: 160%;
+}
+//.image-description-wrap {
+//    margin: 0 -32px -32px;
+//}
+.image-description {
+    max-height: 315px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: calc(100% + 64px);
+}
+
+.image-description img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center bottom 100px;
+}
+
+.bg-white nav + .col-auto + .col-3 {
+    @media screen and (max-width: 992px) {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

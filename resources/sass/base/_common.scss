@@ -1,0 +1,19 @@
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: var(--main-font);
+  min-height: 100%;
+}

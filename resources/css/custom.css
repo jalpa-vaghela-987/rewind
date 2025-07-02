@@ -1,0 +1,64 @@
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: inline-block !important;
+}
+
+button.btn-close.opacity-1.float-right.align-top.align-self-start.ms-auto.col-auto.me-2 {
+    width: 0.3em;
+    height: 0.3em;
+}
+
+select.error {
+    color: #ee2e73;
+    background: rgba(255, 151, 151, .06);
+    border: 1px solid #ee2e73;
+}
+
+.showCertificateBlcok {
+    margin-bottom: 20px !important;
+}
+
+.drop-area .fileElem {
+    display: none !important;
+}
+
+.showCertificateTopBlock {
+    margin-left: 15px !important;
+}
+
+aside.asidebar {
+    z-index: 1
+}
+
+.approveCertificateBtn {
+    font-size: 14px !important;
+}
+
+.half-table-container {
+    height: 180px;
+    max-height: 180px;
+    overflow: auto;
+}
+
+.flashContent {
+    display: contents !important;
+}
+.counter-offer-block {
+    width: 300px;
+}
+
+.buy-image {
+    object-fit: cover;
+}
+
+.buy-image img {
+    max-height: 315px;
+    width: 100%;
+}
+
+.drop-area-cover{
+    width: 100% !important;
+}
+
+.user-detail-btn {
+    width: 180px !important;;
+}

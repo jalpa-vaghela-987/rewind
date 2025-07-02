@@ -1,0 +1,39 @@
+.nav.basic-style {
+  .nav-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--black-50);
+    padding: 8px 16px 16px;
+    transition: all 500ms linear;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      padding: 4px 4px 8px;
+    }
+    &::after {
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 4px;
+      background-color: var(--green-20);
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transition: all 500ms linear;
+    }
+    &.active {
+      font-weight: 700;
+      color: var(----bs-body-color);
+      &::after {
+        background-color: var(--green);
+        border-radius: 2px;
+        width: calc(100% - 1px);
+      }
+    }
+  }
+}
+
+// #buyModalTabsContent .tab-pane.show {
+//   display: flex;
+// }

@@ -1,0 +1,35 @@
+.mb-70 {
+  margin-bottom: 70px;
+}
+.mb-65 {
+  margin-bottom: 65px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+  @media screen and (min-width: 1000px) {
+    margin-top: 40px;
+  }
+}
+.mt-65 {
+  margin-top: 65px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}

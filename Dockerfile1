@@ -1,0 +1,34 @@
+FROM composer:2.3.5 as build
+COPY . /app/
+RUN docker-php-ext-install  bcmath
+RUN composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction
+
+FROM php:8.1-apache-buster as production
+WORKDIR /var/www/html
+ENV APP_ENV=production
+ENV APP_DEBUG=false
+
+RUN docker-php-ext-configure opcache --enable-opcache && \
+    docker-php-ext-install pdo pdo_mysql bcmath
+COPY docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
+COPY --from=build /app /var/www/html
+COPY docker/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY .env.example /var/www/html/.env
+
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    npm
+
+RUN npm install
+
+RUN npm install firebase
+RUN npm install -g firebase-tools
+
+RUN ls -la /var/www/html
+RUN service --status-all
+
+RUN cd /var/www/html && php artisan optimize:clear && php artisan storage:link && \
+    chmod 777 -R /var/www/html/storage/ && \
+    chown -R www-data:www-data /var/www/ && \
+    a2enmod rewrite

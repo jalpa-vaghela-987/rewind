@@ -1,0 +1,119 @@
+main {
+  background-color: #f3f7f7;
+  padding: 32px;
+  @media screen and (max-width: 992px) {
+    padding: 16px;
+  }
+}
+
+.block-main {
+  box-shadow: 0px 4px 4px #e6f2f2;
+  border-radius: 24px;
+  overflow: hidden;
+  &:not(.p-0) {
+    padding: 32px;
+    @media screen and (max-width: 992px) {
+      padding: 16px;
+    }
+  }
+}
+.block-more-half {
+  max-width: calc(58.33333333% - 16px);
+  min-width: calc(58.33333333% - 16px);
+  @media screen and (max-width: 992px) {
+    max-width: unset;
+  }
+}
+.block-more-half + * {
+  max-width: calc(100% - 58.33333333% + 16px);
+  min-width: calc(100% - 58.33333333% + 16px);
+  @media screen and (max-width: 992px) {
+    max-width: unset;
+  }
+}
+
+.empty-dash {
+  height: fit-content !important;
+  padding: 32px !important;
+  text-align: center;
+
+  &.h-100 {
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+}
+.main-info {
+  .price {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--bs-body-color);
+  }
+  .statistic-price {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+.statistic-price {
+  line-height: 100%;
+  svg {
+    fill: currentColor;
+  }
+  &.statistic-decrease {
+    color: #ee2e73;
+  }
+  &.statistic-increase {
+    color: #39a935;
+  }
+}
+.border-left-before {
+  border-left: 3px solid #f3f7f7;
+  @media screen and (max-width: 992px) {
+    border-left: 0px solid #f3f7f7;
+    border-top: 3px solid #f3f7f7;
+  }
+}
+@supports selector(p:has(a)) {
+  .block-main:has(.border-left-before) {
+    padding: 0px !important;
+    height: fit-content;
+  }
+  .block-main:has(.border-left-before) > *:not(.p-0) {
+    padding: 32px !important;
+  }
+}
+@supports not selector(p:has(a)) {
+  .border-left-before {
+    border-left: 3px solid #f3f7f7;
+  }
+  .border-left-before {
+    margin-top: -32px;
+    margin-bottom: -32px;
+    padding: 32px !important;
+    padding-right: 0px !important;
+  }
+  .block-main > div:first-child:nth-last-child(2) {
+    padding-right: 32px !important;
+  }
+}
+
+.mh-75vh {
+  max-height: 75vh;
+  // min-height: 600px;
+  @media screen and (max-width: 992px) {
+    max-height: unset;
+    min-height: unset;
+    .block-main {
+      height: 400px !important;
+    }
+    .h-100 {
+      height: unset !important;
+    }
+  }
+}
+.maxw-200 {
+  max-width: 200px;
+}
